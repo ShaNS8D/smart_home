@@ -24,14 +24,3 @@ class SensorDetailView(RetrieveUpdateAPIView):
 class MeasurementView(CreateAPIView):
     queryset = Measurement.objects.all()
     serializer_class = MeasurementSerializer
-
-    # def get_object(self, pk):
-    #     return TestModel.objects.get(pk=pk)
-
-    # def patch(self, request, pk):
-    #     testmodel_object = self.get_object(pk)
-    #     serializer = TestModelSerializer(testmodel_object, data=request.data, partial=True) # set partial=True to update a data partially
-    #     if serializer.is_valid():
-    #         serializer.save()
-    #         return JsonResponse(code=201, data=serializer.data)
-    #     return JsonResponse(code=400, data="wrong parameters")
